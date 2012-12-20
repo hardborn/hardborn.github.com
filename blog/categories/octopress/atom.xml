@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Hardborn's Blog]]></title>
+  <link href="http://hardborn.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://hardborn.github.com/"/>
+  <updated>2012-12-20T19:07:51+08:00</updated>
+  <id>http://hardborn.github.com/</id>
+  <author>
+    <name><![CDATA[Hardborn]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress(Ubuntu 12.10)]]></title>
+    <link href="http://hardborn.github.com/blog/2012/12/20/first-blog/"/>
+    <updated>2012-12-20T10:06:00+08:00</updated>
+    <id>http://hardborn.github.com/blog/2012/12/20/first-blog</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+
+<p>接触到Octopress是通过学习GitHub的使用，第一眼见到他就爱上了。平日里没有用过博客方式去记录我的生活和工作，今天起一切都变了，记录一切！
+Octopress确实是个好东西，但在Windows8环境下进行安装和使用，切身体会到了什么是痛苦，来来回回折腾了不下十次，还是不圆满。于是只好在Ubuntu 12.10下使用Octopress，无奈呀？！总有一天我会‘杀’回去的。
+下面我就梳理一下我在Ubuntu下完整的安装过程。</p>
+
+<h2>Step 1:安装依赖项</h2>
+
+<p><code>ruby 安装Git和Ruby
+sudo apt-get install build-essential git ruby1.9.1 ruby1.9.1-dev make -y
+</code></p>
+
+<h2>Step 2:下载Octopress</h2>
+
+<p><code>ruby 从GitHub下载Octopress
+mkdir ~/octopress
+cd ~
+git clone git://github.com/imathis/octopress.git octopress
+</code></p>
+
+<h2>Step 3:安装Bundler</h2>
+
+<p><code>ruby
+sudo gem install bundler
+</code></p>
+
+<h2>Step 4:安装Octopress</h2>
+
+<p><code>ruby
+cd ~/octopress
+bundle install
+</code></p>
+
+<h2>Step 5:使用Octopress</h2>
+
+<p>``` ruby
+rake install
+rake new_post["test"]</p>
+
+<h1>文件在 octopress/source/_posts/ 下</h1>
+
+<p>rake generate
+```</p>
+
+<h1>完整脚本</h1>
+
+<blockquote><p><code>这个脚本将把Octopress安装在 ~/octopress</code>
+<code>ruby
+sudo apt-get install build-essential git ruby1.9.1 ruby1.9.1-dev make -y
+mkdir ~/octopress
+cd ~
+git clone git://github.com/imathis/octopress.git octopress
+sudo gem install bundler
+cd ~/octopress
+bundle install
+rake install
+rake new_post["test"]
+rake generate
+</code></p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>
